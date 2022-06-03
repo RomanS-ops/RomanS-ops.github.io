@@ -1,0 +1,76 @@
+{
+	"1": {
+		"name": "Грочаємо алгоритми",
+		"autor": "Адітья Бхаргава",
+		"cost": 310,
+		"image": "../assets/images/book-1.png"
+	},
+	"2": {
+		"name": "Байєсівська статистика",
+		"autor": "Вілл Карт",
+		"cost": 950,
+		"image": "../assets/images/book-2.png"
+	},
+	"3": {
+		"name": "JAVASCRIPT. Повне керівництв..",
+		"autor": "Девід Фленган",
+		"cost": 999,
+		"image": "../assets/images/book-3.png"
+	},
+	"4": {
+		"name": "CSS: Повний довідник",
+		"autor": "Ерік Мейєр, Естелл Вейл",
+		"cost": 979,
+		"image": "../assets/images/book-4.png"
+	},
+	"5": {
+		"name": "Сам собі програміст",
+		"autor": "Корі Альтхофф",
+		"cost": 299,
+		"image": "../assets/images/book-5.png"
+	},
+	"6": {
+		"name": "Перлини програмування",
+		"autor": "Джон Бентлі",
+		"cost": 510,
+		"image": "../assets/images/book-6.png"
+	},
+	"7": {
+		"name": "Як насправді працюють комп'ют...",
+		"autor": "Метью Джастіс",
+		"cost": 990,
+		"image": "../assets/images/book-7.png"
+	},
+	"8": {
+		"name": "Однорядники Python",
+		"autor": "Крістіан Майєр",
+		"cost": 599,
+		"image": "../assets/images/book-8.png"
+	},
+	"9": {
+		"name": "Про криптографію всерйоз",
+		"autor": "Жан-Філіп Омассон",
+		"cost": 999,
+		"image": "../assets/images/book-9.png"
+	},
+	"10": {
+		"name": "Я відключився від інтернету",
+		"autor": "Тьєррі Крузе",
+		"cost": 169,
+		"image": "../assets/images/book-10.png"
+	},
+	"11": {
+		"name": "HTML и CSS3 для чайників",
+		"autor": "Ед Тіттел",
+		"cost": 589,
+		"image": "../assets/images/book-11.png"
+	},
+	"12": {
+		"name": "Не змушуйте мене думати",
+		"autor": "Стів Круг",
+		"cost": 620,
+		"image": "../assets/images/book-12.png"
+	}
+
+
+}

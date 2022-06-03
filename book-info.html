@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    
+    <!-- Useful meta tags -->
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="width=device-width">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    
+    <title>By-read</title>
+    
+</head>
+<body>
+    
+    <div class="page">
+        
+            <aside class="sidebare">
+                <form class="search" action="/" method="post">
+                    <input class="search__input" type="text" placeholder="Пошук">
+                    <button class="search__send" type="submit">
+                        <img src="assets/images/search.svg" alt="Отправить">
+                    </button>
+                </form>
+                <nav class="sidebare__nav">
+                    <ul class="sidebare__nav-list">
+                        <li class="sidebare__nav-item">
+                            <img class="sidebare__nav-icon" src="assets/images/user.svg" alt="Особистий кабінет">
+                            <a id="outBtn" class="sidebare__nav-link" href="#">Особистий кабінет</a>
+                        </li>
+                        <li class="sidebare__nav-item">
+                            <img class="sidebare__nav-icon" src="assets/images/shop-cart.svg" alt="Корзина">
+                            <a id="myBtn" class="sidebare__nav-link" href="#">Корзина <span id="notice" class="notice" >0</span></a>
+                        </li>
+            
+                    </ul>
+                </nav>
+                <div id="mypopup" class="popup">
+                    <div class="popup-content">
+                        <div class="popup-header">
+                            <span class="clouse">&times;</span>
+                        </div>
+                        
+                        <div class="popup-body"  >
+                            <!-- <h2>В корзине 2 товара на суму 930 ₴</h2> -->
+                            <div class="cart-test" id="my-cart">
+                                <p>Корзина пуста</p>
+                                <!-- <div class="cart-test__left">
+                                    <img src="images/image.png" alt="#">
+                                </div>
+                                <div class="cart-test__rigth">
+                                    <h2>Грокаем алгоритмы</h2>
+                                    <p>Адитья Бхаргава</p>
+                                    <div class="cart-test__nomber">
+                                        <button>+</button>
+                                        <button>1</button>
+                                        <button>+</button>
+                                        <p>310$</p>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <a class="popup__btn" href="../payment.html">Оформити замовлення</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="mypopupOut" class="popup__out">
+                    <div class="popup-content">
+                        <div class="popup-header">
+                            <span class="clouse__out">&times;</span>
+                        </div>
+                        <div class="popup-out-body"  >
+                            <h2>Вхід до інтернет-магазину</h2>
+                            <input type="text" placeholder="Ваша пошта або телефон">
+                            <input type="text" placeholder="Пароль">
+                            <div class="popup-body__items">
+                                <a href="#">Нагадати пароль</a>
+                                <div class="popup-body-checkbox">
+                                    <input type="checkbox" id="scales" name="scales">
+                                    <label for="scales">Запам'ятати мене</label>
+                                  </div>
+                            </div>
+                            <a class="popup-body-entrance__btn" href="../error.html">Вхід</a>
+                            <p>або</p>
+                            <a href="../error.html">Зареєструватись</a>
+                        </div>
+                    </div>
+                </div>
+            </aside>        <div class="container"> 
+            <!-- Header -->
+            <header class="header">
+                <div class="header__logo">
+                    <img class="logo" src="assets/images/logo.svg" alt="Logo">
+                </div>
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item"><a class="header__nav-link" alt="Головна" href="../index.html">Головна</a></li>
+                        <li class="header__nav-item"><a class="header__nav-link" alt="Акції" href="../stock.html">Акції</a></li>
+                        <li class="header__nav-item"><a class="header__nav-link" alt="Про магазин" href="../about-shop.html">Про магазин</a></li>
+                        <li class="header__nav-item"><a class="header__nav-link" alt="Оплата та доставка" href="../payment-delivery.html">Оплата та доставка</a></li>
+                        <li class="header__nav-item"><a class="header__nav-link" alt="Контакти" href="../contact.html">Контакти</a></li>
+                    </ul>
+                </nav>
+            </header>        </div>
+        <main class="main">
+            
+                
+                <div class="book-info">
+                    <div id="mini-cart"></div>
+                    <div class="book-info__modal" id="goods">
+                        <div style="text-align: center; margin: 50px 50px 100px"></div>
+                            <h2 class="subtitle" >Помилка</h2>
+                        </div>
+                    </div>
+                    <div class="book-info__content">
+                        <div class="container">
+                            <h1 class="title bb">Від видавця</h1>
+                            <p> Захоплююче ілюстроване видання, що дозволяє швидко та легко вивчити складне для багатьох поняття алгоритму. Тут не зустрінуться незрозумілі математичні формули, хитромудрі пояснення, де доводиться гуглити кожне слово, щоб зрозуміти автора. Купити «Грокаємо алгоритми» - значить максимально спростити завдання занурення в тему. У тексті дохідливо подаються базові матеріали, які допомагають розпочати вивчення і зрозуміти, що все не так страшно.</p>
+                            <h2 class="subtitle">Про що книга</h2>
+                            <p>Видання Адітьї Бхаргави - ілюстрування керівництво для початківців або тих, хто цікавиться тематикою. Тут не представлені абсолютно всі алгоритми чи структури даних, складні концепції чи інноваційні методики розв'язання. Читачеві наочно подаються лише знання, що мають практичну цінність. Матеріал представлений від простого до складного, супроводжуючись повторними поясненнями, вправами, безліччю малюнків та прикладів із життєвих ситуацій.
+                            </p>
+                            <p>У книзі ви дізнаєтесь про:</p>
+                            <ul>
+                                <li class="block__li">бінарному пошуку;</li>
+                                <li class="block__li">зв'язних списках, масивах;</li>
+                                <li class="block__li">особливих прийомах та методах вирішення задач;</li>
+                                <li class="block__li">хеш-таблицях;</li>
+                                <li class="block__li">нетривіальні алгоритми та інші поняття.</li>
+                            </ul>
+                            <p>Книга Адітьї Бхаргави «Грокаємо алгоритми» легко читається та затягує з перших сторінок. Завдяки особливій подачі матеріалу немає бажання відпочити або відкласти вивчення на потім.</p>
+                            <h2 class="subtitle">Для кого видання</h2>
+                            <p>Матеріал корисний людям, які володіють основними знаннями в програмуванні, тим, хто тільки починає цікавитися темою і хоче дізнатися, де знадобляться алгоритми. Також книга створена для студентів: програмістів, математиків, фізиків та інших суміжних спеціальностей.</p>
+                            <p>Якщо ви все ще роздумуєте, чи потрібна вам «Грокаємо алгоритми», відгуки допоможуть переконатися, що це саме те видання, яке ви так довго шукали. Читачі відзначають максимальну корисність та простоту книги, зручні ілюстрації, відмінну якість друку.</p>
+                        <div class="reviews">
+                            <h1 class="title bb">Відгуки</h1>
+                            <div class="review">
+                                <div class="rating"> <span>&#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span> </div> 
+                                <div class="name">
+                                    <h2 class="name__subtitle">Євген</h2>
+                                    <time class="name__date" datetime="2019-01-29">29 січня 2019</time>
+                                </div>
+                                <p> Переваги: <span>Простота подачі матеріалу</span></p>
+                                <p>Коментар: <span> Книга досить цікава, від глави до глави розкриваються складніші теми, це книга про всіх алгоритмах і всіх структурах даних чи новітніх підходах, скоріш це керівництво з картинками для початківців чи цікавляться у темі. Досвідченим книга може здатися надто легкою, починається розповідь з алгоритму сортування вибором, пояснюється, що таке масиви і що таке динамічні списки тощо. аж до хеш-таблиць, пошуку завширшки і т.д.</span></p>
+                            </div>
+                        </div>
+                            <div class="add__review">
+                                <div><span>&#9734</span> <span>&#9734</span> <span>&#9734</span> <span>&#9734</span> <span>&#9734</span> </div> 
+                                <div class="add__review-content">
+                                    
+                                    <div class="add__review-left">
+                                        
+                                        <textarea name="benefits" placeholder="Переваги"></textarea>
+                                        <textarea name="limitations" placeholder="Недоліки"></textarea>
+                                        <input type="text" placeholder="Ваше ім'я">
+                                    </div>
+                                    <div class="add__review-right">
+                                        <textarea name="comment" placeholder="Ваш коментар"></textarea>
+                                        <a href="#" class="book-info__btn add__review-btn ">Відправити відгук</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                   
+                </div>
+                
+                
+            
+        </main>
+            <footer class="footer">
+                <p>© <span>2019 - 2022</span> «КупиЧитай» </p>
+                <div class="footer__tel">
+                    <a href="tel:+380952222222">+ 380 95 222 22 22</a>
+                    <a href="tel:+380952222222">+ 380 95 222 22 22</a>
+                </div>
+                <nav class="footer__nav">
+                    <ul class="footer__nav-list">
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="../about-shop.html">Про магазин</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="../error.html">Партнерам</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="../error.html">Вакансії</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="../error.html">Політика конфіденційності</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="footer__nav-link" href="../error.html">Політика конфіденційності</a>
+                        </li>
+                    </ul>
+                </nav>
+            </footer>
+    </div>  
+      
+
+    <!--  JS  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script >
+        var cart = {}; // моя корзина 
+
+        $('document').ready(function(){
+            loadGoods();
+            checkCart();
+            showMiniCart();
+         });
+
+         function loadGoods() {
+            //загружаю товары на страницу
+            $.getJSON('goods.json', function (data) {
+                console.log(data[localStorage.test]["name"]);
+                var out = '';
+                let i = 1;
+                for (let i = 0; i <1; i++) {
+                    out+='<div class="book-info__left"> <div id="tabs">';
+                        out+='<div id="tabs-1" class="book-info__tabs"> ';
+                        out+='<img src="'+data[localStorage.test]["image"]+'" class="book-info__photo" style=" margin: 0 0 20px;" alt="">';
+                        out+='</div>';
+                        out+='<div id="tabs-2">';
+                        out+='<img src="assets/images/book-info-3.png " class="book-info"class="book-info__photo" style=" display:none; width: 625px; height: 886px; margin: 0 0 20px;" alt=""> ';
+                        out+='</div>';
+                        out+='<div id="tabs-3">';
+                        out+='<img src="assets/images/book-info-4.png" class="book-info"class="book-info__photo" style=" display:none; width: 625px; height: 886px; margin: 0 0 20px;" alt="">';
+                        out+='</div>';
+                        out+='<div id="tabs-4">';
+                        out+='<img src="assets/images/book-info-5.png" class="book-info"class="book-info__photo" style=" display:none; width: 625px; height: 886px; margin: 0 0 20px;" alt="">';
+                        out+='</div>';
+                        out+=' <ul class="book-info__tabs">';
+                        out+=' <li><a href="#tabs-1"><img src="'+data[localStorage.test]["image"]+'" style="max-width:163px ;" class="book-info__photo" alt=""></a></li>';
+                        out+='<li><a href="#tabs-2"><img src="assets/images/book-info-3.png" class="book-info__photo" alt=""></a></li>';
+                        out+='<li><a href="#tabs-3"><img src="assets/images/book-info-4.png" class="book-info__photo" alt=""></a></li>';
+                        out+='<li><a href="#tabs-4"><img src="assets/images/book-info-5.png" class="book-info__photo" alt=""></a></li>';
+                        out+='</ul>';
+                        out+='</div>';
+                        out+='</div>';
+                        out+='<div class="book-info__right">';
+                        out+='<h1 class="book-info__title">'+data[localStorage.test]["name"]+'</h1><h2 class="book-info__subtitle">'+data[localStorage.test]["autor"]+'</h2><div class="ratings"><div class="rating"> <span>&#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span><span>&#9734</span> </div> <a href="#">(1 відгук)</a></div><p class="title">'+data[localStorage.test]["cost"]+' ₴</p> <div class="counter__wrap"><input class="counter__wrap-text"  type="text" value="1"><button data-art="'+localStorage.test+'" class="book-info__btn counter__wrap-btn add-to-cart" href="#">В кошик <img src="assets/images/shop-cart-3.svg" alt=""></button> </div>';
+                        out+='<div class="book-info__info"><p>ISBN: <span> 978-5-496-02541-6</span></p><p>Оригінальна назва: <span> Grokking Algorithms: An illustrated guide for programmers and other curious people</span></p><p>Автор: <span>'+data[localStorage.test]["autor"]+'</span></p> <p>Перекладач: <span> Є. Матвєєв</span></p><p>Серія: <span> Бібліотека програміста</span></p><p>Рік: <span> 2017 </span></p><p>Сторінок: <span> 288 </span></p><p>Формат: <span> 70х100 1/16 (170х240 мм)</span></p><p>Обкладинка: <span> мя`ка</span></p><p>Тип паперу: <span> Офсет</span></p><p>Мова: <span> російська</span></p><p>Ілюстрації: <span> Чорно-білі</span></p><p>Вага, г: <span> 379</span></p></div>';
+                        out+='</div>';
+                        out+='';
+                    
+                }
+                $('#goods').html(out);
+                $('button.add-to-cart').on('click', addToCart);
+            });
+        } 
+           
+
+            function addToCart() {
+                //добавляем товар в корзину 
+                var articul = $(this).attr('data-art');
+                if (cart[articul]!=undefined) {
+                    cart[articul]++
+                }
+                else {
+                    cart[articul] = 1
+                }
+                alert('Додано до кошика!');
+                localStorage.setItem('cart', JSON.stringify(cart) );
+                console.log(cart);
+                showMiniCart();
+            }
+
+            function checkCart() {
+                // Проверяю наличее порзины в localStorage
+                if (localStorage.getItem('cart') != null) {
+                    cart = JSON.parse (localStorage.getItem('cart'));
+                }
+            }
+            
+            function showMiniCart() {
+                //показываю содержимое корзины
+                var cart={}; //корзина
+
+                $.getJSON('goods.json', function (data) {
+                    var goods = data; //все товары в массиве
+                    console.log(goods);
+                    checkCart()
+                    //console.log(cart);
+                    showCart(); //вывожу товары на страницу
+                    function showCart() {
+                        if ($.isEmptyObject(cart)) {
+                            //Корзина пуста 
+                            var out = 'Кошик порожній. Додати товар до кошика. <a href="index.html">Головна сторінка</a> ';
+                            $('#my-cart').html(out);
+                        }
+                        else {
+                            var out='';
+                            for (var key in cart) {
+                                console.log(key);
+                                out+='<div class="cart__items">';
+                                out+='<div class="cart-test__left">';
+                                out+='<img src="'+goods[key]["image"]+'" alt="#">';
+                                out+='</div>';
+                                out+='<div class="cart-test__rigth">';
+                                out+='<h2>'+goods[key]["name"]+'</h2>';
+                                out+='<p>'+goods[key]["autor"]+'</p>';
+                                out+= '<button class="delete"  data-art="'+key+'">x</button>';
+                                out+='<button class="minus" data-art="'+key+'">-</button>';
+                                out+=cart[key];
+                                out+='<button class="plus" data-art="'+key+'">+</button>';
+                                out+=cart[key]*goods[key].cost;
+                                out+='</div>';
+                                out+='</div>';
+                            }
+                            $('#my-cart').html(out);
+                            $('.delete').on('click', deleteGoods);
+                            $('.plus').on('click', plusGoods);
+                            $('.minus').on('click', minusGoods);
+                            $('.delete').on('click', deleteGoods);
+                        }
+                    }
+                    showCart2(); //вывожу товары на страницу
+                    function showCart2() {
+                        if ($.isEmptyObject(cart)) {
+                            //Корзина пуста 
+                            var out = 'Кошик порожній. Додати товар до кошика. <a href="index.html">Головна сторінка</a> ';
+                            $('#my-cart').html(out);
+                        }
+                        else {
+                            var out='';
+                            var namegroup =  '';
+                            var autorgroup =  '';
+                            var amountgroup =  '';
+                            var pricegroup =  '';
+                            for (var key in cart) {
+                                namegroup = namegroup + " - "  + goods[key].name + " - ";
+                                autorgroup = autorgroup + " - "  + goods[key].autor + " - ";
+                                amountgroup = amountgroup + " - "  + cart[key] + " - ";
+                                pricegroup = pricegroup + " - " + cart[key]*goods[key].cost + " - ";
+
+                                out+='<div class="cart__items">';
+                                out+='<div class="payment-cart__left">';
+                                out+='<div class="payment-cart__image">';
+                                out+='<img src="'+goods[key].image+'" alt="#">';
+                                out+='</div>';
+                                out+='<div class="payment-cart__title"> <input type="text" value="'+namegroup+'" style="display: none;" id="" name="book_name">';
+                                out+='<h2>'+goods[key].name+'</h2>';
+                                out+='<input type="text" value="'+autorgroup+'" style="display: none;" id="" name="book_autor"><p>'+goods[key].autor+'</p>';
+                                out+='</div>'
+                                out+='</div>';
+                                out+='<div class="payment-cart__nomber"><input type="text" value="'+amountgroup +'" style="display: none;" id="" name="book_amount">'
+                                out+=cart[key];
+                                out+='</div>';
+                                out+='<div class="payment-cart__price"><input type="text" value="'+pricegroup+'" style="display: none;" id="" name="book_price"> '
+                                out+=cart[key]*goods[key].cost;
+                                out+='</div>';
+                                out+='</div>';
+
+    
+                            }
+                            console.log(namegroup);
+                            //<div class="cart-test__left">
+                            //    <img src="images/image.png" alt="#">
+                            //</div>
+                            //<div class="cart-test__rigth">
+                            //    <h2>Грокаем алгоритмы</h2>
+                            //    <p>Адитья Бхаргава</p>
+                            //    <div class="cart-test__nomber">
+                            //        <button>+</button>
+                            //        <button>1</button>
+                            //        <button>+</button>
+                            //        <p>310$</p>
+                            //    </div>
+                            //</div>
+                            $('#my-cart-check').html(out);
+                        }
+                        showCart3(); //вывожу товары на страницу
+                    function showCart3() {
+                            var out='';
+                            //Узнаём число элементов объекта
+                            var countElementsObj = Object.keys(cart).length;
+
+                            out+= countElementsObj;
+                                
+                            $('#notice').html(out);
+                        }
+                    }
+    
+                    function plusGoods() {
+                        var articul = $(this).attr('data-art');
+                        cart[articul]++;
+                        saveCartToLS();
+                        showCart();
+                        showCart2();
+                    }
+    
+                    function minusGoods() {
+                        var articul = $(this).attr('data-art');
+                        if (cart[articul]>1) {
+                            cart[articul]--;
+                        }
+                        else {
+                            delete cart[articul];
+                        }
+                        
+                        saveCartToLS();
+                        showCart();
+                        showCart2();
+                    }
+                    function deleteGoods() {
+                        var articul = $(this).attr('data-art');
+                            delete cart[articul];
+                        saveCartToLS();
+                        showCart();
+                        showCart2();
+                    }
+                })
+    
+                function checkCart() {
+                    // Проверяю наличее порзины в localStorage
+                    if (localStorage.getItem('cart') != null) {
+                        cart = JSON.parse (localStorage.getItem('cart'));
+                    }
+                }
+    
+                function saveCartToLS() {
+                    localStorage.setItem('cart', JSON.stringify(cart) );
+                }
+                var out = '';
+                for (var w in cart){
+                    out += w + '---'+cart[w]+'<br>';
+                }
+                
+                $('#mini-cart').html(out);
+            }
+            
+       
+    </script>
+
+    <script>
+       
+    </script>
+
+    <!-- Мини галарея в book-info -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <script>
+            $( function() {
+            $( "#tabs" ).tabs();
+            } );
+    </script>
+    <!-- Выпадающее окно -->
+    <script>
+        let popup = document.getElementById('mypopup'),
+            popupToggle = document.getElementById('myBtn'),
+            popupClose = document.querySelector('.clouse');
+
+            popupToggle.onclick = function() {
+                popup.style.display="block";
+            }
+
+            popupClose.onclick = function() {
+                popup.style.display="none";
+            }
+
+            window.onclick = function(e) {
+                if(e.target == popup) {
+                    popup.style.display="none";
+                }
+            }
+
+
+            
+
+        let acc = document.getElementsByClassName("payment-accordion");
+        let i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].onclick = function () {
+                this.classList.toggle("active");
+
+                this.nextElementSibling.classList.toggle("show");
+            }
+        }
+    </script>
+    <script>
+        let popupOut = document.getElementById('mypopupOut'),
+            popupToggleOut = document.getElementById('outBtn'),
+            popupCloseOut = document.querySelector('.clouse__out');
+
+            popupToggleOut.onclick = function() {
+                popupOut.style.display="block";
+            }
+
+            popupCloseOut.onclick = function() {
+                popupOut.style.display="none";
+            }
+
+            window.onclick = function(e) {
+                if(e.target == popupOut) {
+                    popupOut.style.display="none";
+                }
+            }
+    </script>
+</body>
+</html>
